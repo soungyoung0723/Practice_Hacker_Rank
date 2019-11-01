@@ -1,6 +1,6 @@
-## midium level
+# midium level
 
-## Consider  and  to be two points on a 2D plane.
+## Consider and  to be two points on a 2D plane.
 
 -  happens to equal the minimum value in Northern Latitude (LAT_N in STATION).
 -  happens to equal the minimum value in Western Longitude (LONG_W in STATION).
@@ -13,5 +13,16 @@ The STATION table is described as follows:
 
 Query the [Manhattan Distance](https://xlinux.nist.gov/dads/HTML/manhattanDistance.html) between points  and  and round it to a scale of  decimal places.
 
-
 where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+--Solution
+/*
+Enter your query here.
+Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+*/
+SELECT ROUND(abs((MAX(LONG_W)-MIN(LONG_W)))+ABS((MIN(LAT_N) - MAX(LAT_N))),4) 
+FROM STATION
+
+
+
+
